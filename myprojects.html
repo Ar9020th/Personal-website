@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/375ee0ef33.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body onload="bringProjects()">
+    <div class="vertical-nav bg-dark" id="sidebar">
+      <div class="py-4 px-3 mb-4 mt-5 bg-dark">
+        <div class="media d-flex align-items-center">
+          <img
+            src="images/me.jpg"
+            alt="..."
+            width="80"
+            height="80"
+            class="mr-3 rounded-circle img-thumbnail shadow-sm"
+          />
+          <div class="media-body">
+            <h4 class="m-0" style="color: whitesmoke">csart</h4>
+            <p class="mb-0" style="color: rgb(238, 176, 176)">
+              Sport Programmer
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+        Dashboard
+      </p>
+      <ul class="nav flex-column bg-dark mb-0">
+        <li class="nav-item">
+          <a href="./home.html" class="nav-link text-dark">
+            <i class="fa fa-terminal mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 1rem"
+                >Terminal View</span
+              >
+            </i>
+            <p class="navlabeldesc">
+              Tried to give linux users some feel about Terminal
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./aboutme.html" class="nav-link text-dark">
+            <i class="fa fa-user mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 1.4rem"
+                >About Me</span
+              >
+            </i>
+            <p class="navlabeldesc">Will try to describe myself here!</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./myprojects.html" class="nav-link text-dark">
+            <i class="fa fa-tasks mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 0.9rem"
+                >My Projects</span
+              >
+            </i>
+            <p class="navlabeldesc">An attempt to flex my projects here.</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <i class="fa fa-desktop mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 0.8rem"
+                >Some hacks</span
+              >
+            </i>
+            <p class="navlabeldesc">
+              A list of hacks that you might find useful.
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button
+        id="sidebarCollapse"
+        type="button"
+        class="btn btn-light rounded-pill px-2 mb-4"
+      >
+        <i class="fa fa-bars fa-2x mr-2"></i>
+      </button>
+    </div>
+    <div class="page-content p-5 mb-4" id="content">
+      <div class="container">
+        <div class="title1">
+          <h1>My Projects</h1>
+          <h2>This list of projects I have done so far</h2>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">C | System Calls</div>
+                <h2 class="title">C-Shell</h2>
+                <div class="summary">
+                  Cuurently commands like ls, cd, echo, exit, fg, bg, overkill,
+                  pwd, setenv, unsetenv, nightswatch and history are supported.
+                  Piping and redirection is also supported.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/C-Shell"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">MERN | Bootstrap</div>
+                <h2 class="title">Job Application Portal</h2>
+                <div class="summary">
+                  A simple Job Application Portal wherein Applicants can apply
+                  for the jobs listed out by recruiters. Separate interfaces for
+                  applicants and recruiters.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/Job-Application-Portal"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">PyGame | Python libraries</div>
+                <h2 class="title">River Crossing Game</h2>
+                <div class="summary">
+                  A simple game built using pygame for two players. The
+                  objective of each player is to cross the river without hitting
+                  any obstacles which will earn him some points.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/Job-Application-Portal"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">Flutter | Dart | NodeJs | Firebase</div>
+                <h2 class="title">CollegeNet</h2>
+                <div class="summary">
+                  Features of the App include a resource section, an event
+                  viewer, a Cab-Sharing interface with an integrated chat
+                  service and an announcements section.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/Job-Application-Portal"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">Python libraries</div>
+                <h2 class="title">Hit Bricks</h2>
+                <div class="summary">
+                  A terminal based game using python. The objective is simple,
+                  to destroy all bricks. Destroying bricks will earn you points.
+                  Other features include powerups, boss enemy etc.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/Job-Application-Portal"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4">
+            <div class="fancy_card">
+              <img src="./images/demo.jpeg" class="card_image" />
+              <div class="card_text">
+                <div class="tags">Machine Learning</div>
+                <h2 class="title">Genetic Algorithm</h2>
+                <div class="summary">
+                  Usage of the popular genetic algorithm in the field of ML to
+                  produce the best solution among the different solutions
+                  present in a generation.
+                </div>
+              </div>
+              <div class="card_footer text-center">
+                <a href="https://github.com/Ar9020th/Job-Application-Portal"
+                  >Check code here</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer fixed-bottom">
+      <div class="container d-flex flex-row justify-content-between">
+        <span class="d-flex align-items-center" style="color: whitesmoke"
+          >Arth Raj</span
+        >
+        <span>
+          <ul class="list-unstyled list-group list-group-horizontal">
+            <li class="icon-li">
+              <a
+                href="https://github.com/Ar9020th/"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li class="icon-li">
+              <a
+                href="https://www.linkedin.com/in/arth-raj-b09224a0/"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-linkedin-square"></i
+              ></a>
+            </li>
+
+            <li class="icon-li">
+              <a
+                href="https://www.facebook.com/arth.raj.338"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+
+            <li class="icon-li">
+              <a
+                href="mailto:arth.raj@students.iiit.ac.in"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </span>
+      </div>
+
+      <div class="container credits w-100 text-right"></div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

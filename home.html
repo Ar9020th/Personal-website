@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/375ee0ef33.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="vertical-nav bg-dark" id="sidebar">
+      <div class="py-4 px-3 mb-4 mt-5 bg-dark">
+        <div class="media d-flex align-items-center">
+          <img
+            src="images/me.jpg"
+            alt="..."
+            width="80"
+            height="80"
+            class="mr-3 rounded-circle img-thumbnail shadow-sm"
+          />
+          <div class="media-body">
+            <h4 class="m-0" style="color: whitesmoke">csart</h4>
+            <p class="mb-0" style="color: rgb(238, 176, 176)">
+              Sport Programmer
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+        Dashboard
+      </p>
+      <ul class="nav flex-column bg-dark mb-0">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <i class="fa fa-terminal mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 1rem"
+                >Terminal View</span
+              >
+            </i>
+            <p class="navlabeldesc">
+              Tried to give linux users some feel about Terminal
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./aboutme.html" class="nav-link text-dark">
+            <i class="fa fa-user mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 1.4rem"
+                >About Me</span
+              >
+            </i>
+            <p class="navlabeldesc">Will try to describe myself here!</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./myprojects.html" class="nav-link text-dark">
+            <i class="fa fa-tasks mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 0.9rem"
+                >My Projects</span
+              >
+            </i>
+            <p class="navlabeldesc">An attempt to flex my projects here.</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark">
+            <i class="fa fa-desktop mr-3 text-primary fa-2x"
+              ><span class="navlabel" style="margin-left: 0.8rem"
+                >Some hacks</span
+              >
+            </i>
+            <p class="navlabeldesc">
+              A list of hacks that you might find useful.
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button
+        id="sidebarCollapse"
+        type="button"
+        class="btn btn-light rounded-pill px-2 mb-4"
+      >
+        <i class="fa fa-bars fa-2x mr-2"></i>
+      </button>
+    </div>
+    <div class="page-content p-5" id="content">
+      <div class="py-4 px-3 mt-5 terminalbar"></div>
+      <div class="terminal mb-5">
+        <div class="px-3 py-3">
+          <div class="d-flex flex-row">
+            <h4 class="mt-2" style="color: white">~/</h4>
+            <h4 class="ml-3 mt-2" style="color: green">$</h4>
+            <input
+              class="ml-3"
+              type="text"
+              id="textinput"
+              name="textinput"
+              placeholder="help"
+              autofocus="autofocus"
+              style="
+                background-color: black;
+                caret-color: white;
+                color: white;
+                border: black;
+                user-select: none;
+                box-shadow: none;
+                font-size: 25px;
+                width: 120px;
+              "
+            />
+          </div>
+          <div id="instructions">
+            <h4 style="color: white">Run help to get started.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer fixed-bottom">
+      <div class="container d-flex flex-row justify-content-between">
+        <span class="d-flex align-items-center" style="color: whitesmoke"
+          >Arth Raj</span
+        >
+        <span>
+          <ul class="list-unstyled list-group list-group-horizontal">
+            <li class="icon-li">
+              <a
+                href="https://github.com/Ar9020th/"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li class="icon-li">
+              <a
+                href="https://www.linkedin.com/in/arth-raj-b09224a0/"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-linkedin-square"></i
+              ></a>
+            </li>
+
+            <li class="icon-li">
+              <a
+                href="https://www.facebook.com/arth.raj.338"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+
+            <li class="icon-li">
+              <a
+                href="mailto:arth.raj@students.iiit.ac.in"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </span>
+      </div>
+
+      <div class="container credits w-100 text-right"></div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
