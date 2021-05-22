@@ -30,8 +30,12 @@
     </script>
   </head>
   <body>
-    <div class="vertical-nav bg-dark" id="sidebar">
-      <div class="py-4 px-3 mb-4 mt-5 bg-dark">
+    <div
+      class="vertical-nav"
+      id="sidebar"
+      style="background-color: rgb(243, 120, 37)"
+    >
+      <div class="py-4 px-3 mb-4 mt-5">
         <div class="media d-flex align-items-center">
           <img
             src="images/me.jpg"
@@ -41,18 +45,22 @@
             class="mr-3 rounded-circle img-thumbnail shadow-sm"
           />
           <div class="media-body">
-            <h4 class="m-0" style="color: whitesmoke">Arth Raj</h4>
-            <p class="mb-0" style="color: rgb(238, 176, 176)">Programmer</p>
+            <h4 class="m-0" style="color: black">Arth Raj</h4>
+            <p class="mb-0 maintxt" style="color: black">
+              Programmer <span id="main_cursor"></span>
+            </p>
           </div>
         </div>
       </div>
-      <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+      <p
+        class="text-black font-weight-bold text-uppercase px-3 small pb-4 mb-0"
+      >
         Dashboard
       </p>
-      <ul class="nav flex-column bg-dark mb-0">
+      <ul class="nav flex-column mb-0">
         <li class="nav-item">
           <a href="./index.html" class="nav-link text-dark">
-            <i class="fa fa-terminal mr-3 text-primary fa-2x"
+            <i class="fa fa-terminal mr-3 iconcol fa-2x"
               ><span class="navlabel" style="margin-left: 1rem"
                 >Terminal View</span
               >
@@ -64,7 +72,7 @@
         </li>
         <li class="nav-item">
           <a href="./aboutme.html" class="nav-link text-dark">
-            <i class="fa fa-user mr-3 text-primary fa-2x"
+            <i class="fa fa-user mr-3 iconcol fa-2x"
               ><span class="navlabel" style="margin-left: 1.4rem"
                 >About Me</span
               >
@@ -74,7 +82,7 @@
         </li>
         <li class="nav-item">
           <a href="./myprojects.html" class="nav-link text-dark">
-            <i class="fa fa-tasks mr-3 text-primary fa-2x"
+            <i class="fa fa-tasks mr-3 iconcol fa-2x"
               ><span class="navlabel" style="margin-left: 0.9rem"
                 >My Projects</span
               >
@@ -84,7 +92,7 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link text-dark">
-            <i class="fa fa-desktop mr-3 text-primary fa-2x"
+            <i class="fa fa-desktop mr-3 iconcol fa-2x"
               ><span class="navlabel" style="margin-left: 0.8rem"
                 >Some hacks</span
               >
@@ -100,9 +108,9 @@
       <button
         id="sidebarCollapse"
         type="button"
-        class="btn btn-light rounded-pill px-2 mb-4"
+        class="btn btn-light rounded-pill px-3 py-3 mb-4"
       >
-        <i class="fa fa-bars fa-2x mr-2"></i>
+        <i class="fa fa-bars fa-2x mr-2 sidecolbutton"></i>
       </button>
     </div>
     <div class="page-content p-5 mb-5" id="content">

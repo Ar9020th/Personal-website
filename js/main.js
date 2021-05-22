@@ -1,8 +1,24 @@
+var x = 1;
+sidecolbuttoncolors = ["white", "rgb(243, 120, 37)"];
+$(function () {
+  if ($(document).width() < 768) {
+    x = 1;
+  } else {
+    x = 0;
+  }
+  $(".sidecolbutton").css({ color: sidecolbuttoncolors[x] });
+  x++;
+  x %= 2;
+});
 $(function () {
   $("#sidebarCollapse").on("click", function () {
     $("#sidebar,#content").toggleClass("active");
+    $(".sidecolbutton").css({ color: sidecolbuttoncolors[x] });
+    x++;
+    x %= 2;
   });
 });
+
 var cd_command = `<h4 style="color: white">cd<br>Usage : cd [dir]<br>Navigate between directories using this command<br></h4>`;
 var ls_command = `<h4 style="color: white">ls<br>Usage : ls [dir]<br>List all the files present in dir<br>By default, ls lists files of the present working directory</h4>`;
 var clear_command = `<h4 style="color: white">clear<br>Usage : clear<br>Clear contents of the screen</h4>`;
@@ -91,3 +107,39 @@ $(document).on("keypress", "input", function (e) {
     }
   }
 });
+var descList = ["Developer", "Sport Programmer", "ML Enthusiast"];
+var curr = 0;
+var currIdx = 0;
+var interval;
+var currEle = document.querySelector(".maintxt");
+var cursorEle = document.querySelector("#main_cursor");
+
+interval = setInterval(type, 70);
+
+function type() {
+  var text = descList[curr].substring(0, currIdx + 1);
+  currEle.innerHTML = text + `<span id="main_cursor"></span>`;
+  currIdx++;
+  if (text === descList[curr]) {
+    clearInterval(interval);
+    setTimeout(function () {
+      interval = setInterval(backspace, 40);
+    }, 1000);
+  }
+}
+
+function backspace() {
+  var text = descList[curr].substring(0, currIdx - 1);
+  currEle.innerHTML = text + `<span id="main_cursor"></span>`;
+  currIdx--;
+  if (text === "") {
+    clearInterval(interval);
+    if (curr == descList.length - 1) curr = 0;
+    else curr++;
+    currIdx = 0;
+    setTimeout(function () {
+      cursorEle.style.display = "inline-block";
+      interval = setInterval(type, 70);
+    }, 200);
+  }
+}
